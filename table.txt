@@ -1,0 +1,66 @@
+
+
+CREATE DATABASE university;
+USE university;
+show databases;
+
+
+CREATE STUDENTS TABLE 
+
+CREATE TABLE students (
+    student_id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    age INT NOT NULL,
+    gender ENUM('Male', 'Female', 'Other') NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    phone VARCHAR(15),
+    department VARCHAR(100),
+    admission_date DATE,
+    gpa DECIMAL(3,2),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+INSERT DATA IN STUDENETS TABLE 
+
+
+
+INSERT INTO students (first_name, last_name, age, gender, email, phone, department, admission_date, gpa)
+VALUES 
+('Aarav', 'Sharma', 21, 'Male', 'aarav.sharma@univ.in', '9876543210', 'Computer Science', '2022-09-01', 3.8),
+('Ananya', 'Iyer', 22, 'Female', 'ananya.iyer@univ.in', '9876543211', 'Mechanical Engineering', '2021-08-15', 3.5),
+('Rohan', 'Patil', 20, 'Male', 'rohan.patil@univ.in', '9876543212', 'Electrical Engineering', '2023-01-10', 3.7),
+('Divya', 'Nair', 19, 'Female', 'divya.nair@univ.in', '9876543213', 'Biotechnology', '2022-06-20', 3.9),
+('Vikram', 'Reddy', 23, 'Male', 'vikram.reddy@univ.in', '9876543214', 'Civil Engineering', '2020-07-11', 3.4),
+('Priya', 'Singh', 21, 'Female', 'priya.singh@univ.in', '9876543215', 'Business Administration', '2022-09-01', 3.6),
+('Siddharth', 'Kulkarni', 22, 'Male', 'siddharth.kulkarni@univ.in', '9876543216', 'Physics', '2021-05-12', 3.2),
+('Meera', 'Pillai', 20, 'Female', 'meera.pillai@univ.in', '9876543217', 'Mathematics', '2023-02-15', 3.7),
+('Arjun', 'Das', 21, 'Male', 'arjun.das@univ.in', '9876543218', 'Computer Science', '2022-08-30', 3.9),
+('Sneha', 'Choudhury', 23, 'Female', 'sneha.choudhury@univ.in', '9876543219', 'Environmental Science', '2020-09-05', 3.3),
+('Karan', 'Verma', 20, 'Male', 'karan.verma@univ.in', '9876543220', 'Mechanical Engineering', '2023-01-10', 3.5),
+('Pooja', 'Bhatt', 22, 'Female', 'pooja.bhatt@univ.in', '9876543221', 'Psychology', '2021-07-22', 3.6),
+('Rahul', 'Joshi', 21, 'Male', 'rahul.joshi@univ.in', '9876543222', 'Economics', '2022-10-01', 3.4),
+('Neha', 'Deshmukh', 19, 'Female', 'neha.deshmukh@univ.in', '9876543223', 'Political Science', '2023-04-05', 3.8),
+('Aditya', 'Mishra', 22, 'Male', 'aditya.mishra@univ.in', '9876543224', 'Architecture', '2021-09-18', 3.2);
+
+
+
+CREATE A TABLE DEPARTMENTS
+
+
+CREATE TABLE departments ( department_id INT AUTO_INCREMENT PRIMARY KEY, department_name VARCHAR(100) UNIQUE NOT NULL, head_of_department VARCHAR(100), contact_email VARCHAR(100) UNIQUE );
+
+
+INSERT INTO departments (department_name, head_of_department, contact_email)
+VALUES
+('Computer Science', 'Dr. Rajesh Kumar', 'cs@univ.in'),
+('Mechanical Engineering', 'Dr. Suresh Patel', 'me@univ.in'),
+('Electrical Engineering', 'Dr. Anita Sharma', 'ee@univ.in'),
+('Biotechnology', 'Dr. Priya Nair', 'bio@univ.in'),
+('Civil Engineering', 'Dr. Mohan Reddy', 'ce@univ.in'),
+('Business Administration', 'Dr. Sunita Mehta', 'mba@univ.in'),
+('Physics', 'Dr. Rohit Verma', 'physics@univ.in'),
+('Mathematics', 'Dr. Meera Pillai', 'math@univ.in'),
+('Environmental Science', 'Dr. Sneha Choudhury', 'envsci@univ.in'),
+('Psychology', 'Dr. Anjali Joshi', 'psychology@univ.in');
